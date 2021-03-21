@@ -1,4 +1,4 @@
-web: voila --port=$PORT --no-browser app.ipynb
+web: voila --port=$PORT --no-browser California.ipynb
 alabaster==0.7.12
 anaconda-client==1.7.2
 anaconda-navigator==1.10.0

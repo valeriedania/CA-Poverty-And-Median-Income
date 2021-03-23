@@ -109,8 +109,7 @@ p.patches('x', 'y', source=data,
           fill_color={'field': 'poverty', 'transform': color_mapper},
           fill_alpha=0.7, line_color="white", line_width=0.5)
 
-show(p)
-
+curdoc().add_root(p)
 
 # In[ ]:
 

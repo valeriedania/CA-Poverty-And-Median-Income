@@ -8,7 +8,7 @@ from IPython.display import display, HTML
 from bokeh.io import show
 from bokeh.models import LogColorMapper, ColumnDataSource
 from bokeh.palettes import Cividis256 as palette
-from bokeh.plotting import figure
+from bokeh.plotting import figure, curdoc
 from bokeh.sampledata.us_counties import data as counties
 import pandas as pd
 

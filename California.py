@@ -5,6 +5,7 @@
 
 
 from IPython.display import display, HTML
+import bokeh.sampledata
 from bokeh.io import show
 from bokeh.models import LogColorMapper, ColumnDataSource
 from bokeh.palettes import Cividis256 as palette

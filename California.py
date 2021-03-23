@@ -5,7 +5,6 @@
 
 
 from IPython.display import display, HTML
-import bokeh.sampledata
 from bokeh.io import show
 from bokeh.models import LogColorMapper, ColumnDataSource
 from bokeh.palettes import Cividis256 as palette
@@ -13,8 +12,6 @@ from bokeh.plotting import figure, curdoc
 from bokeh.sampledata.us_counties import data as counties
 import pandas as pd
 
-
-bokeh.sampledata.download()
 
 #Import data file
 df = pd.read_csv('/Users/Valerie/cali_data.csv',delimiter=',', header=0, skiprows=2)

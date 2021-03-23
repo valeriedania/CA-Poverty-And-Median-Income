@@ -4,7 +4,7 @@
 # In[1]:
 
 
-#from IPython.display import display, HTML
+from IPython.display import display, HTML
 from bokeh.io import show
 from bokeh.models import LogColorMapper, ColumnDataSource
 from bokeh.palettes import Cividis256 as palette

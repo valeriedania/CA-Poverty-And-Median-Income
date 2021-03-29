@@ -13,7 +13,7 @@ from bokeh.sampledata.us_counties import data as counties
 import pandas as pd
 
 #Import data file
-df = pd.read_csv('/Users/Valerie/cali_data.csv',delimiter=',', header=0, skiprows=2)
+df = pd.read_csv('cali_data.csv',delimiter=',', header=0, skiprows=2)
 
 #Drop first row
 df = df.drop(df.index[0])

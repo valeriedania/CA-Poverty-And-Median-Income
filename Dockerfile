@@ -17,9 +17,6 @@ ENV PAND_VERSION=1.1.3
 ENV IPYK_VERSION=5.5.0
 ENV BOKEH_RESOURCES=cdn
 
-#Clone repo from GitHub
-RUN apt-get install git bash
-RUN git clone --branch https://github.com/valeriedania/CA-Poverty-And-Median-Income.git
 
 #Install packages 
 RUN conda config --append channels bokeh
@@ -30,12 +27,6 @@ RUN python -c 'import bokeh; bokeh.sampledata.download(progress=False)'
 
 # make port 5006 avaiable to the world outside the container
 EXPOSE 5006
-EXPOSE 80
 
-CMD bokeh serve \
-    --allow-websocket-origin="*" \
-    --disable-index-redirect \
-    --port=5006  \
-    --address=0.0.0.0  \
-    --num-procs=${NUM_PROCS} \  
-    /app/California.py 
+
+CMD bokeh serve CMD bokeh serve --disable-index-redirect --num-procs=${NUM_PROCS} --port=5006 --address=0.0.0.0 --allow-websocket-origin=$CALI_POV_AND_INCOME California.py

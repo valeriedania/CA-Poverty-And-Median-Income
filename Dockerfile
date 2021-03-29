@@ -29,4 +29,4 @@ RUN python -c 'import bokeh; bokeh.sampledata.download(progress=False)'
 EXPOSE 5006
 
 
-CMD bokeh serve CMD bokeh serve --disable-index-redirect --num-procs=${NUM_PROCS} --port=5006 --address=0.0.0.0 --allow-websocket-origin=$CALI_POV_AND_INCOME California.py
+CMD bokeh serve CMD bokeh serve --disable-index-redirect --num-procs=${NUM_PROCS} --port=5006 --address=0.0.0.0 --allow-websocket-origin=$CALI_POV_AND_INCOME /app/California.py

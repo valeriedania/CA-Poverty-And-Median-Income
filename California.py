@@ -4,7 +4,6 @@
 # In[1]:
 
 
-from IPython.display import display, HTML
 from bokeh.io import show
 from bokeh.models import LogColorMapper, ColumnDataSource
 from bokeh.palettes import Cividis256 as palette
@@ -28,7 +27,7 @@ df_factors = df[["county_name", "poverty_percent", "median_income"]]
 df_dic = df_factors.to_dict('index')
 
 
-display(HTML(df_factors.to_html()))
+
 
 
 # In[2]:

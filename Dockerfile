@@ -14,13 +14,12 @@ ENV BK_VERSION=2.2.3
 ENV PY_VERSION=3.8
 ENV NUM_PROCS=4
 ENV PAND_VERSION=1.1.3
-ENV IPYK_VERSION=5.5.0
 ENV BOKEH_RESOURCES=cdn
 
 
 #Install packages 
 RUN conda config --append channels bokeh
-RUN conda install --yes --quiet python=${PY_VERSION} ipykernel=${IPYK_VERSION} pyyaml jinja2 bokeh=${BK_VERSION} numpy numba scipy sympy "nodejs>=8.8" pandas scikit-learn
+RUN conda install --yes --quiet python=${PY_VERSION} pyyaml jinja2 bokeh=${BK_VERSION} numpy numba scipy sympy "nodejs>=8.8" pandas scikit-learn
 RUN conda clean -ay
 RUN python -c 'import bokeh; bokeh.sampledata.download(progress=False)'
 

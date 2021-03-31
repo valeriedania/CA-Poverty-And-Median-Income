@@ -3,7 +3,7 @@ Data visualization of California's poverty percentage estimate and median househ
 
 Technologies used:
 
-Python
+Python  
 Pandas
 Jupyter Notebook
 Docker

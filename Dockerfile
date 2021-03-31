@@ -26,6 +26,7 @@ RUN python -c 'import bokeh; bokeh.sampledata.download(progress=False)'
 
 # make port 5006 avaiable to the world outside the container
 EXPOSE 5006
+EXPOSE 80
 
 CMD bokeh serve --num-procs=${NUM_PROCS} --port=5006 --address=0.0.0.0 --allow-websocket-origin=localhost:5006 /app/California.py
 
